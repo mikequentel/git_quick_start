@@ -1,5 +1,4 @@
-# Git Quick Start and Intro (in my own words).
-
+# Git Quick Start and Intro (in my own words)
 ## About Git
 * Unlike older, centralised version control systems, Git is "distributed". What this really means is that there typically is not just one "repo" (repository) of the source code to be stored; instead, there is a local repo on your workstation (PC or laptop or whatever you are working on), and a remote "master" repo that typically lives in a Git repository server, such as GitHub.com
 * Additionally, there may be another copy of the repo on GitHub that is either a "fork" (copy) of your repo; or maybe your repo is a fork of someone else's repo. This happens when a repo is popular--people fork the repo and therefore create their own, newer version, independent of the original.
