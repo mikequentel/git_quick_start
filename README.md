@@ -89,35 +89,19 @@ Branch master set up to track remote branch master from origin by rebasing.
 
 ### Example of creating a new branch, then switching back to `master` branch
 ```
-mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git remote -v
-origin	git@github.com:mikequentel/git_quick_start.git (fetch)
-origin	git@github.com:mikequentel/git_quick_start.git (push)
 mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git branch
-mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git status
-On branch master
-
-Initial commit
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	README.md
-
-nothing added to commit but untracked files present (use "git add" to track)
-mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git add .
-mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git commit -am "Add directory containing README.md"
-[master (root-commit) 314253a] Add directory containing README.md
- 1 file changed, 54 insertions(+)
- create mode 100644 README.md
-mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git push -u origin master
-Counting objects: 3, done.
-Delta compression using up to 2 threads.
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 1.68 KiB | 0 bytes/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To git@github.com:mikequentel/git_quick_start.git
- * [new branch]      master -> master
-Branch master set up to track remote branch master from origin by rebasing.
+* master
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git checkout -b newexamplebranch
+Switched to a new branch 'newexamplebranch'
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git branch
+  master
+* newexamplebranch
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git branch
+* master
+  newexamplebranch
 ```
 
 ### Example of fetching and merging (pulling) from a remote repo into a local repo
