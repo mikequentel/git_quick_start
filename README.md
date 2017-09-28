@@ -119,3 +119,92 @@ To git@github.com:mikequentel/git_quick_start.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin by rebasing.
 ```
+
+### Example of fetching and merging (pulling) from a remote repo into a local repo
+```
+mikequentel@reliance:~/mq/mq_wkspc/discourse$ git pull
+remote: Counting objects: 70453, done.
+remote: Compressing objects: 100% (215/215), done.
+remote: Total 70453 (delta 17948), reused 18065 (delta 17912), pack-reused 52325
+Receiving objects: 100% (70453/70453), 49.65 MiB | 1.58 MiB/s, done.
+Resolving deltas: 100% (39710/39710), completed with 3868 local objects.
+From https://github.com/discourse/discourse
+   2ce9d3d..4319d8a  master     -> origin/master
+   1b2a6c6..bad3d4e  beta       -> origin/beta
+ * [new branch]      discours   -> origin/discours
+ * [new branch]      flexbox-composer -> origin/flexbox-composer
+ * [new branch]      hbs-widget -> origin/hbs-widget
+ * [new branch]      inline-onebox -> origin/inline-onebox
+ * [new branch]      no_timecop -> origin/no_timecop
+ * [new branch]      remove-markdownjs -> origin/remove-markdownjs
+ * [new branch]      search-log -> origin/search-log
+ * [new branch]      sidekiq_mem_leak -> origin/sidekiq_mem_leak
+   f7a335a..5137ae8  stable     -> origin/stable
+ * [new branch]      super-flags -> origin/super-flags
+   9f4ef6e..3e6bf38  tests-passed -> origin/tests-passed
+ * [new branch]      translations-aug29 -> origin/translations-aug29
+ * [new branch]      upgrade_to_rails_5_1 -> origin/upgrade_to_rails_5_1
+ * [new branch]      words      -> origin/words
+ * [new tag]         v1.6.10    -> v1.6.10
+ * [new tag]         v1.6.2     -> v1.6.2
+ * [new tag]         v1.6.3     -> v1.6.3
+ * [new tag]         v1.6.4     -> v1.6.4
+ * [new tag]         v1.6.5     -> v1.6.5
+ * [new tag]         v1.6.6     -> v1.6.6
+ * [new tag]         v1.6.7     -> v1.6.7
+ * [new tag]         v1.6.8     -> v1.6.8
+ * [new tag]         v1.6.9     -> v1.6.9
+ * [new tag]         v1.7.0     -> v1.7.0
+ * [new tag]         v1.7.0.beta10 -> v1.7.0.beta10
+ * [new tag]         v1.7.0.beta11 -> v1.7.0.beta11
+ * [new tag]         v1.7.0.beta3 -> v1.7.0.beta3
+ * [new tag]         v1.7.0.beta4 -> v1.7.0.beta4
+ * [new tag]         v1.7.0.beta5 -> v1.7.0.beta5
+ * [new tag]         v1.7.0.beta6 -> v1.7.0.beta6
+ * [new tag]         v1.7.0.beta7 -> v1.7.0.beta7
+ * [new tag]         v1.7.0.beta8 -> v1.7.0.beta8
+ * [new tag]         v1.7.0.beta9 -> v1.7.0.beta9
+ * [new tag]         v1.7.1     -> v1.7.1
+ * [new tag]         v1.7.10    -> v1.7.10
+ * [new tag]         v1.7.2     -> v1.7.2
+ * [new tag]         v1.7.3     -> v1.7.3
+ * [new tag]         v1.7.4     -> v1.7.4
+ * [new tag]         v1.7.5     -> v1.7.5
+ * [new tag]         v1.7.6     -> v1.7.6
+ * [new tag]         v1.7.7     -> v1.7.7
+ * [new tag]         v1.7.8     -> v1.7.8
+ * [new tag]         v1.7.9     -> v1.7.9
+ * [new tag]         v1.8.0     -> v1.8.0
+ * [new tag]         v1.8.0.beta1 -> v1.8.0.beta1
+ * [new tag]         v1.8.0.beta10 -> v1.8.0.beta10
+ * [new tag]         v1.8.0.beta11 -> v1.8.0.beta11
+ * [new tag]         v1.8.0.beta12 -> v1.8.0.beta12
+ * [new tag]         v1.8.0.beta13 -> v1.8.0.beta13
+ * [new tag]         v1.8.0.beta2 -> v1.8.0.beta2
+ * [new tag]         v1.8.0.beta3 -> v1.8.0.beta3
+ * [new tag]         v1.8.0.beta4 -> v1.8.0.beta4
+ * [new tag]         v1.8.0.beta5 -> v1.8.0.beta5
+ * [new tag]         v1.8.0.beta6 -> v1.8.0.beta6
+ * [new tag]         v1.8.0.beta7 -> v1.8.0.beta7
+ * [new tag]         v1.8.0.beta8 -> v1.8.0.beta8
+ * [new tag]         v1.8.0.beta9 -> v1.8.0.beta9
+ * [new tag]         v1.8.1     -> v1.8.1
+ * [new tag]         v1.8.2     -> v1.8.2
+ * [new tag]         v1.8.3     -> v1.8.3
+ * [new tag]         v1.8.4     -> v1.8.4
+ * [new tag]         v1.8.5     -> v1.8.5
+ * [new tag]         v1.8.6     -> v1.8.6
+ * [new tag]         v1.8.7     -> v1.8.7
+ * [new tag]         v1.9.0.beta1 -> v1.9.0.beta1
+ * [new tag]         v1.9.0.beta10 -> v1.9.0.beta10
+ * [new tag]         v1.9.0.beta2 -> v1.9.0.beta2
+ * [new tag]         v1.9.0.beta3 -> v1.9.0.beta3
+ * [new tag]         v1.9.0.beta4 -> v1.9.0.beta4
+ * [new tag]         v1.9.0.beta5 -> v1.9.0.beta5
+ * [new tag]         v1.9.0.beta6 -> v1.9.0.beta6
+ * [new tag]         v1.9.0.beta7 -> v1.9.0.beta7
+ * [new tag]         v1.9.0.beta8 -> v1.9.0.beta8
+ * [new tag]         v1.9.0.beta9 -> v1.9.0.beta9
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to 4319d8a142ea23bdfc9025d137662aa17ac37bd0.
+```
