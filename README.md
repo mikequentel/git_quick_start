@@ -38,9 +38,9 @@
 * The cloned repo can be independently developed, apart from the "remote" (parent) on the GitHub server. Later, the user can do a "push" (upload) to the "remote".
 
 ## Create a brand new repo
-* This is how you create a new repo.
-1. Create in GitHub a new repo.
-2. Create the repo using the command `git init` in the parent directory of your source code.
+* This is how you create a new repo. Here, you will make 1) a remote GitHub repo, and 2) a local repo that will connect with the remote GitHub repo.
+1. Create in GitHub a new repo. Could also be GitLab or one of many other Git managers.
+2. On your workstation, create the local repo using the command `git init` in the parent directory of your source code.
 3. Connect this local repo to the one in GitHub so you can push and pull changes between your local repo and the master remote repo: `git add remote <URL or SSH string of repo>`
 4. Add the existing source code directory: `git add .`
 5. Commit the changes and include a message: `git commit -am "Initialise new repo."`
