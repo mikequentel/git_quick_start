@@ -48,7 +48,75 @@
 6. Push the changes to the remote master: `git push -u origin master` (the `-u` is only needed the first time you push in order to link the remote master to your local master; after that, you can simply do `git push origin master`).
 
 ## Working with the repos
+### `master` and other branches
 * On your own projects, you can typically get away with only working in your `master` (default) branch; however, you might want to create a separate branch to fix bugs or create new features.
 * If you have more than one branch (more than just `master` branch), then to switch from `master` to another branch, do: `git checkout <name of branch>`
 * If you would like to create a new branch, do: `git checkout -b <name of new branch>`
 * If you want to switch back to `master`, same sort of syntax: `git checkout master`
+### Example of initial commit and push to the remote `origin master`
+
+```
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git remote -v
+origin	git@github.com:mikequentel/git_quick_start.git (fetch)
+origin	git@github.com:mikequentel/git_quick_start.git (push)
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git branch
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git add .
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git commit -am "Add directory containing README.md"
+[master (root-commit) 314253a] Add directory containing README.md
+ 1 file changed, 54 insertions(+)
+ create mode 100644 README.md
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.68 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:mikequentel/git_quick_start.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin by rebasing.
+
+```
+
+### Example of creating a new branch, then switching back to `master` branch
+```
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git remote -v
+origin	git@github.com:mikequentel/git_quick_start.git (fetch)
+origin	git@github.com:mikequentel/git_quick_start.git (push)
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git branch
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git add .
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git commit -am "Add directory containing README.md"
+[master (root-commit) 314253a] Add directory containing README.md
+ 1 file changed, 54 insertions(+)
+ create mode 100644 README.md
+mikequentel@reliance:~/mq/mq_wkspc/git_quick_start$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.68 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:mikequentel/git_quick_start.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin by rebasing.
+```
